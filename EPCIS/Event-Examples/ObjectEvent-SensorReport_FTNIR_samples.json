@@ -7415,6 +7415,10 @@
             ]
         },
         {
+            "sensorMetadata": {
+                "time": "2022-11-07T09:56:56.000+01:00",
+                "rawData": "https://medifit-sample-exchange.s3.eu-central-1.amazonaws.com/Adulterared_honey_raw+data_AUTH_FT-NIR.xlsx"
+            },
             "sensorReport": [
                 {
                     "type": "Wavenumber",
@@ -14814,6 +14818,10 @@
             ]
         },
         {
+            "sensorMetadata": {
+                "time": "2022-11-07T09:56:56.000+01:00",
+                "rawData": "https://medifit-sample-exchange.s3.eu-central-1.amazonaws.com/Adulterared_honey_raw+data_AUTH_FT-NIR.xlsx"
+            },
             "sensorReport": [
                 {
                     "type": "Wavenumber",
@@ -22213,6 +22221,10 @@
             ]
         },
         {
+            "sensorMetadata": {
+                "time": "2022-11-07T09:56:56.000+01:00",
+                "rawData": "https://medifit-sample-exchange.s3.eu-central-1.amazonaws.com/Adulterared_honey_raw+data_AUTH_FT-NIR.xlsx"
+            },
             "sensorReport": [
                 {
                     "type": "Wavenumber",
