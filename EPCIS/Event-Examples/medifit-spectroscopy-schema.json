@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https:/ref.medifit-prima.net/epcis/sensorReport/spectroscopy",
+    "type": "object",
+    "properties": {
+      "mft-spectra:values": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      },
+      "mft-spectra:type": {
+        "type": "string",
+        "enum": ["FTIR-ATR", "FT-NIR", "Raman"]
+      }
+    }
+  }
