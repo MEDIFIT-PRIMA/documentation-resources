@@ -3,13 +3,13 @@
     "$id": "https:/ref.medifit-prima.net/epcis/sensorReport/spectroscopy",
     "type": "object",
     "properties": {
-      "mft-spectra:values": {
+      "values": {
         "type": "array",
         "items": {
           "type": "number"
         }
       },
-      "mft-spectra:type": {
+      "type": {
         "type": "string",
         "enum": ["FTIR-ATR", "FT-NIR", "Raman"]
       }
