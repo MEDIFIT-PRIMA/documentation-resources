@@ -1,0 +1,58 @@
+{
+    "@context": [
+        "https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld",
+        {
+            "fskx": "https://medifit-prima.github.io/fsklab-json/1.0.4/FSKModel.json",
+            "fskparam": "https://medifit-prima.github.io/fsklab-json/FSKParameter"
+        }
+    ],
+    "type": "EPCISQueryDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2023-11-13T10:50:27.056Z",
+    "epcisBody": {
+        "queryResults": {
+            "resultsBody": {
+                "eventList": [
+                    {
+                        "type": "AssociationEvent",
+                        "eventTime": "2023-11-09T14:07:14.263Z",
+                        "eventTimeZoneOffset": "+02:00",
+                        "recordTime": "2023-10-09T14:11:20.092Z",
+                        "eventID": "urn:uuid:573c9e63-e58a-49eb-b4b2-def4fcaef4ab",
+                        "childEPCs": [
+                            "https://id.gs1.org/01/04025865629733/21/0000"
+                        ],
+                        "action": "ADD",
+                        "bizStep": "inspecting",
+                        "disposition": "in_progress",
+                        "readPoint": {
+                            "id": "fskx:bfr:zl2030:api_test2"
+                        },
+                        "bizTransactionList": [
+                            {
+                                "type": "testprd",
+                                "bizTransaction": "https://github.com/MEDIFIT-PRIMA/data_fusion/tree/main/fskx_models"
+                            }
+                        ],
+                        "fskparam:parameters": [
+                            {
+                                "fskparam:modelId": "99e6ed98-f02b-4d59-8a99-d026d7f59112",
+                                "fskparam:metadata": {
+                                    "fskparam:classification": "INPUT",
+                                    "fskparam:value": "h_f2_ad_raman.xlsx",
+                                    "fskparam:name": "INPUT-FILE",
+                                    "fskparam:dataType": "FILE",
+                                    "fskparam:unit": "D",
+                                    "fskparam:id": "INPUT-FILE"
+                                },
+                                "fskparam:parameterType": "FILE",
+                                "fskparam:generatorLanguage": "Python 3.10",
+                                "fskparam:data": "https://github.com/MEDIFIT-PRIMA/data_fusion/raw/main/ExampleData/h_f2_ad_raman.xlsx"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
