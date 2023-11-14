@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Medifit Prima",
+    "folders": [],
+    "requests": [
+      {
+        "v": "1",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "body": {
+          "body": "{\n    \"name\": \"TemperatureAlert\",\n    \"createdAt\": \"2023-11-13T09:38:25.699592826Z\",\n    \"query\": {\n        \"eventType\": [\n            \"ObjectEvent\"\n        ],\n        \"EQ_action\": [\n            \"OBSERVE\"\n        ],\n        \"GT_value_CEL\": 25.0\n    }\n}",
+          "contentType": "application/json"
+        },
+        "name": "persistTemperatureAlert",
+        "method": "POST",
+        "params": [],
+        "headers": [],
+        "endpoint": "<<url>>/queries",
+        "testScript": "",
+        "preRequestScript": ""
+      },
+      {
+        "v": "1",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "name": "deleteQuery",
+        "method": "DELETE",
+        "params": [],
+        "headers": [],
+        "endpoint": "<<url>>/queries/TemperatureAlert",
+        "testScript": "",
+        "preRequestScript": ""
+      },
+      {
+        "v": "1",
+        "auth": {
+          "authType": "none",
+          "authActive": true
+        },
+        "body": {
+          "body": null,
+          "contentType": null
+        },
+        "name": "getNamedQuery",
+        "method": "GET",
+        "params": [],
+        "headers": [],
+        "endpoint": "<<url>>/queries/TemperatureAlert",
+        "testScript": "",
+        "preRequestScript": ""
+      },
+      {
+        "v": "1",
+        "auth": {
+          "addTo": "Headers",
+          "scope": "<<keycloak-scope>>",
+          "token": "",
+          "authURL": "<<keycloak-auth-url>>",
+          "authType": "bearer",
+          "clientID": "<<keycloak-client-id>>",
+          "authActive": true,
+          "accessTokenURL": "<<keycloak-refresh-token-url>>",
+          "oidcDiscoveryURL": ""
+        },
+        "body": {
+          "body": "{\n    \"@context\": [\n        \"https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld\"\n    ],\n    \"id\": \"https://id.example.org/document1\",\n    \"type\": \"EPCISDocument\",\n    \"schemaVersion\": \"2.0\",\n    \"creationDate\": \"2023-11-13T11:30:47.000Z\",\n    \"epcisBody\": {\n        \"eventList\": [\n            {\n                \"type\": \"ObjectEvent\",\n                \"action\": \"OBSERVE\",\n                \"bizStep\": \"inspecting\",\n                \"disposition\":\"in_progress\",\n                \"epcList\": [\n                    \"fskx:model:uuid:43bc4c4e-dd7b-4147-94ab-946eacc58dd2\"\n                ],\n                \"eventTime\": \"2023-11-13T15:30:00.000Z\",\n                \"eventTimeZoneOffset\": \"+03:00\",\n                 \"readPoint\": {\n                    \"id\": \"urn:epc:id:sgln:89494398.9838.19\"\n                },\n                \"sensorElementList\": [\n                    {\n                        \n                        \"sensorReport\": [\n                            {\n                                \"type\": \"Temperature\",\n                                \"value\": 60.0012,\n                                \"uom\": \"CEL\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+          "contentType": "application/json"
+        },
+        "name": "captureEventsWithSensorElement",
+        "method": "POST",
+        "params": [],
+        "headers": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "active": false
+          },
+          {
+            "key": "Roles-Allowed",
+            "value": "event-access-medifit-supplier",
+            "active": true
+          }
+        ],
+        "endpoint": "<<url>>/capture",
+        "testScript": "",
+        "preRequestScript": ""
+      },
+      {
+        "v": "1",
+        "auth": {
+          "addTo": "Headers",
+          "scope": "<<keycloak-scope>>",
+          "token": "",
+          "authURL": "<<keycloak-auth-url>>",
+          "authType": "bearer",
+          "clientID": "<<keycloak-client-id>>",
+          "authActive": true,
+          "accessTokenURL": "<<keycloak-refresh-token-url>>",
+          "oidcDiscoveryURL": ""
+        },
+        "body": {
+          "body": "{\n    \"@context\": [\n        \"https://ref.gs1.org/standards/epcis/2.0.0/epcis-context.jsonld\"\n    ],\n    \"id\": \"https://id.example.org/document1\",\n    \"type\": \"EPCISDocument\",\n    \"schemaVersion\": \"2.0\",\n    \"creationDate\": \"2023-07-11T11:30:47.000Z\",\n    \"epcisBody\": {\n        \"eventList\": [\n            {\n                \"type\": \"ObjectEvent\",\n                \"action\": \"OBSERVE\",\n                \"bizStep\": \"inspecting\",\n                \"disposition\":\"in_progress\",\n                \"epcList\": [\n                    \"fskx:model:uuid:43bc4c4e-dd7b-4147-94ab-946eacc58dd2\"\n                ],\n                \"eventTime\": \"2023-11-07T15:30:00.000Z\",\n                \"eventTimeZoneOffset\": \"+03:00\",\n                 \"readPoint\": {\n                    \"id\": \"urn:epc:id:sgln:89494398.9838.19\"\n                },\n                \"sensorElementList\": [\n                    {\n                        \n                        \"sensorReport\": [\n                            {\n                                \"type\": \"Temperature\",\n                                \"value\": 42.0285,\n                                \"uom\": \"CEL\"\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}",
+          "contentType": null
+        },
+        "name": "getEvents",
+        "method": "GET",
+        "params": [
+          {
+            "key": "perPage",
+            "value": "10",
+            "active": true
+          }
+        ],
+        "headers": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "active": false
+          }
+        ],
+        "endpoint": "<<url>>/events",
+        "testScript": "",
+        "preRequestScript": ""
+      }
+    ]
+  }
+]

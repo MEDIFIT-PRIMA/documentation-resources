@@ -1,0 +1,49 @@
+{
+  "name": "Medifit Environment Variables",
+  "variables": [
+    {
+      "key": "url",
+      "value": "https://epcis.medifit-prima.net"
+    },
+    {
+      "key": "api-key",
+      "value": ""
+    },
+    {
+      "key": "api-key-secret",
+      "value": ""
+    },
+    {
+      "key": "admin-api-key",
+      "value": ""
+    },
+    {
+      "key": "admin-api-key-secret",
+      "value": ""
+    },
+    {
+      "key": "keycloak-auth-url",
+      "value": "https://keycloak.medifit-prima.net/realms/openepcis/protocol/openid-connect/auth"
+    },
+    {
+      "key": "keycloak-client-id",
+      "value": "backend-service"
+    },
+    {
+      "key": "keycloak-refresh-token-url",
+      "value": "https://keycloak.medifit-prima.net/realms/openepcis/protocol/openid-connect/token"
+    },
+    {
+      "key": "ws-url",
+      "value": "wss://epcis.medifit-prima.net"
+    },
+    {
+      "key": "keycloak-scope",
+      "value": "openid roles profile microprofile-jwt"
+    },
+    {
+      "key": "keycloak-openid-connect-url",
+      "value": "https://keycloak.medifit-prima.net/realms/openepcis/.well-known/openid-configuration"
+    }
+  ]
+}
